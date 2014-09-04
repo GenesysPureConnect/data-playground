@@ -1,0 +1,24 @@
+{
+  "name": "data-playground",
+  "version": "0.0.0",
+  "description": "Get your math on",
+  "main": "server.js",
+  "dependencies": {
+    "bluebird": "^2.1.1",
+    "express": "^4.4.3",
+    "tmp": "0.0.23",
+    "ws": "^0.4.31",
+    "split": "0.3.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@bitbucket.org:inindca/data-playground.git"
+  },
+  "author": "",
+  "license": "ISC"
+}

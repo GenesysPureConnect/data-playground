@@ -1,0 +1,177 @@
+
+.data-playground {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: stretch;
+    overflow: hidden;
+}
+
+.data-playground .terminal,
+.data-playground .display {
+    flex-grow: 1;
+    flex-basis: 50%;
+}
+
+.data-playground .terminal {
+    display: flex;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 54em;
+    flex-direction: column;
+    margin: 10px;
+}
+
+.data-playground .terminal-toggle {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid #ADADAD;
+    border-top: none;
+    border-bottom: none;
+    color: #333;
+    padding: 5px;
+}
+
+.data-playground.terminal-hidden .terminal {
+    display: none;
+}
+
+.data-playground .terminal-show {
+    display: none;
+}
+
+.data-playground.terminal-hidden .terminal-show {
+    display: inline;
+}
+
+.data-playground.terminal-hidden .terminal-hide {
+    display: none;
+}
+
+.data-playground .terminal .history {
+    flex-grow: 1;
+    overflow: auto;
+}
+
+.data-playground .terminal .history .error {
+    color: red;
+}
+
+.data-playground .terminal .prompt {
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+.data-playground .display {
+    display: flex;
+    flex-direction: column;
+}
+
+.data-playground .display .nav-tabs {
+    flex-shrink: 0;
+    flex-grow: 0;
+}
+
+.data-playground .display .tab-content {
+    display: flex;
+    flex-directon: colum;
+    flex-grow: 1;
+    overflow: auto;
+}
+
+.data-playground .display.no-images .images > * {
+    display: none;
+}
+
+.data-playground .display.no-images .plot-tab {
+    display: none;
+}
+
+.data-playground .images.active {
+    display: flex;
+}
+
+.data-playground .images {
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.data-playground .images .plot-carousel {
+    flex-grow: 1;
+    position: relative;
+    overflow: hidden;
+}
+
+.data-playground .images .carousel-controls {
+    flex-grow: 0;
+    flex-shrink: 0;
+    text-align: center;
+    padding: 0 10px 10px 10px;
+}
+
+.data-playground .plot-carousel .plots {
+    display: flex;
+    position: relative;
+    padding: 0;
+    margin: 0;
+}
+
+.data-playground .plots li {
+    list-style-type: none;
+    float: left;
+    flex-basis: 100%;
+    flex-shrink: 0;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.data-playground .plots li img {
+    max-width: 100%;
+    max-height: calc(100% - 86px);
+}
+
+.data-playground .dataframes.active {
+    display: flex;
+}
+
+.data-playground .dataframes {
+    padding: 10px;
+    flex-direction: column;
+    width: 100%;
+}
+
+.data-playground .dataframes .dataframe-request {
+    margin-bottom: 20px;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+.data-playground .dataframes .frames {
+    flex-shrink: 1;
+    overflow: auto;
+}
+
+.data-playground .dataframes.no-frames .df-none {
+    display: block;
+}
+
+.data-playground .dataframes.no-frames .df-core {
+    display: none;
+}
+
+.data-playground .dataframes .df-none {
+    display: none;
+}
+
+.data-playground .dataframes .df-core {
+    display: flex;
+    flex-direction: column;
+}
+
+.data-playground .dataframes .df-core .df-controls {
+    flex-shrink:0;
+    flex-grow: 0;
+    margin-bottom: 20px;
+}

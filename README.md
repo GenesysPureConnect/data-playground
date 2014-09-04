@@ -1,0 +1,1 @@
+Data playground is an in-browser R repl environment. It was created during a two day hackathon project at Interactive Intelligence. It's not quite ready for prime time yet - needs to be de-hackathoned a bit first.

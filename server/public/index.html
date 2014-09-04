@@ -1,0 +1,107 @@
+<!doctype html>
+<html>
+    <head>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+
+        <link href="data-playground.css" type="text/css" rel="stylesheet">
+        <style>
+            * {
+                box-sizing: border-box
+            }
+
+            html, body {
+                margin: 0;
+                padding: 0;
+                height: 100%;
+            }
+
+            .body {
+                padding: 10px;
+            }
+
+            .data-playground {
+                height: 100%;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="data-playground">
+
+            <div class="display no-images">
+                <ul class="nav nav-tabs">
+                    <li class="plot-tab">
+                        <a class="show-plots" href="#plots">Plots</a>
+                    </li>
+                    <li class="active">
+                        <a class="show-frames" href="#dataframes">Data Frames</a>
+                    </li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane images" id="plots">
+                        <div class="plot-carousel">
+                            <ul class="plots">
+                            </ul>
+                        </div>
+                        <div class="carousel-controls">
+                            <a class="carousel-prev btn btn-default" href="#">
+                                <span class="glyphicon glyphicon-step-backward"></span>
+                            </a>
+                            <a class="carousel-next btn btn-default" href="#">
+                                <span class="glyphicon glyphicon-step-forward"></span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="dataframes tab-pane active no-frames" id="dataframes">
+                        <div class="df-core">
+                            <div class="df-controls">
+                                <div class="dropdown dataframe-dropdown">
+                                    <a class="btn btn-default" data-toggle="dropdown" href="#">Data Frames <span class="caret"></span></a>
+                                    <ul class="dropdown-menu df-items" role="menu" aria-labelledby="dLabel">
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="frames">
+                            </div>
+                        </div>
+                        <div class="df-none">
+                            No data frames available.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <a class="terminal-toggle" href="#">
+                <span class="terminal-hide">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                </span>
+                <span class="terminal-show">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                </span>
+            </a>
+
+            <div class="terminal">
+                <pre class="history">
+                </pre>
+                <form class="prompt" action="">
+                    <div class="input-group">
+                        <input type="text" class="command form-control"></input>
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="submit">Go</button>
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <script src="jquery-2.1.1.min.js"></script>
+        <script src="lodash.js"></script>
+        <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+        <script src="jquery.jcarousel.js"></script>
+        <script src="data-playground.js"></script>
+    </body>
+</html>
